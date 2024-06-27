@@ -1,0 +1,50 @@
+Netscape Made JavaScript to address dynamic pages
+EMCA Standardized javascript by Netscape 
+ECMAscript is pretty much javascript 
+...........................................................
+
+Chrome V8 Engine:
+    JavaScript isnt understood by computers
+    Engine converts js code to machine code
+    Its is the core of Node.js
+    It is googles open source Js Engine
+    V8 is written in c++
+
+ ...........................................................
+
+ JavaScript Runtime:
+    Components:
+        V8 Engine:
+            Call Stack
+            Memory Heap
+        Web/Browser APIs:
+            DOM
+            Storage
+            Timers
+        Queues
+        Event Loops
+............................................................
+
+Node.js:
+    Open Source Js Runtime Environment
+    Cross platform
+    Can run outside a Browser
+    NOT a framework/Language, rather runtime env
+
+    Components: 
+        Dependencies
+        C/C++ features
+        JS Library
+
+    What can you build:
+        Websites
+        APIs
+        Real Time Apps
+        Streaming Servcies
+        CLI
+        Multiplayer Games
+         
+    Dependencies:
+        V8
+        uv -> for file system
+.....................................................................

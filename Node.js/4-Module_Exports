@@ -1,0 +1,8 @@
+Use Module.exports() to expose functionalities
+    //File 1
+    module.exports = add;
+    //File 2
+    const add  = require('./add.js') //Here variable can be anything
+     
+
+ 

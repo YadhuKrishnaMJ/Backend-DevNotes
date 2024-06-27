@@ -1,0 +1,24 @@
+Module Scope:
+    Every module in Js has its own scope
+    uses iife (Immediately invoked Function  Expression) pattern:
+        (function(){
+            //code
+        })()
+        Each function gets its private scope
+..............................................
+
+Module Wrapper: 
+        Module are wrapped in a function with parameter while we call require
+        5 parameters are injected by JS into functions 
+            exports:
+
+            require:
+                Import a module by path
+            module:
+                Reference to the current module
+            __filename:
+                Path to the current path
+            __dirname:
+                Directory name of the current module
+.......................................................................................
+            

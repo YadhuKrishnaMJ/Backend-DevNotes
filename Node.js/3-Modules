@@ -1,0 +1,21 @@
+Modules:
+    Reusable chunk of code/ Encapsulated
+    Each file -> Separate Module
+
+    Types:
+        Local -> User created
+        Built In 
+        Third Party -> By other developers
+..................................................................................
+
+Local Modules:
+    Modes we create
+
+CommonJS:
+    Standard how modules should be structures and shared
+
+    To load a module to another module:
+        Use Require:
+             require('./add.js')
+....................................................................................
+

@@ -1,0 +1,16 @@
+Executing Codes:
+    1. Node REPL:
+        Read 
+        Evaluate
+        Print
+        Loop
+    2. JS File in Command
+...................................................
+
+Browser vs Node.JS:
+    Dom control etc is not in node.JS
+    Node.js provides nice apis and functionalities
+    You control the environment in node.js
+
+....................................................
+
