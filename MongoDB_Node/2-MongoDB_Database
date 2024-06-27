@@ -1,0 +1,87 @@
+MongoDB:
+    General Purpose Document Database
+    Documents:
+        Similar to JSON
+        Flexible
+        Document Model:
+            Easy to plan
+            model any shape/structure of Data
+            ex:
+                key-value
+                text
+                geospatial
+                time-series
+                graph Data
+            easy development
+            drivers in all programming language
+
+        Why mongodb?
+            Scalability
+            Resilience 
+            Speed of Dev
+            Privacy and Security
+...........................................................
+Document:
+    Basic unit of data
+
+Collection: 
+    Group of similar Document
+
+Database:
+    Container of Collections
+......................................................
+
+MongoDb -> Core of Atlas 
+
+......................................................
+
+MongoDB Document Model:
+    Displayed in JSON
+    Stored in BSON (Binary JSON) -> Adds More datatypes
+    Data Types:
+        All Json
+        Dates
+        Numbers
+        Object Ids -> Create Unique identifiers
+        
+    _id -> Id field as primary key
+
+    Polymorphic Documents -> Fields (any type)
+    Flexible scema
+    Constraints -> Schema Validation
+
+
+Syntax:
+
+{
+"key": value,
+"key": value,
+"key" : value
+}
+Example:
+
+{
+"_id": 1,
+"name": "AC3 Phone",
+"colors" : ["black", "silver"],
+"price" : 200,
+"available" : true
+}
+.........................................................
+Atlas Data Explorer:
+    Interact and manage data using ui 
+.........................................................
+Creating a Database:
+    create database from ui 
+    name collections 
+    create
+.........................................................
+Creating collection:
+    select database
+    Create collection
+..........................................................
+Inserting Documents:
+    Click insert Document
+    Edit the Json
+..........................................................
+

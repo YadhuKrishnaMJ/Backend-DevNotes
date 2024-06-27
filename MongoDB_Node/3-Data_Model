@@ -1,0 +1,84 @@
+Schema:
+    How data is organized
+Data modelling:
+    Data stored and relationships
+
+A good DataModel:
+    Easier
+    Efficent
+    Less Memory and Cpu
+    Less Cost
+
+Polymorphism
+
+Schema Flexible
+
+...................................................
+Embedded Document modelling
+References can be used to create a relation
+
+...................................................
+ Relation types:
+    one - one
+    one - many -> we can use nested Array
+    many - many 
+..................................................
+Relation methods:
+    Embedding
+        Related documents are embeedded
+    Referencing
+        using Object ID
+...................................................
+Data that are accessed together should be stored together
+...................................................
+Embedding:
+    Optimal for One - one and One - many
+    Nested Documents:
+        Documents inside Documents
+    
+    Adv:
+        Avoids Application Joins
+        Better Performance
+        Single write for related data
+
+    Warnings:
+        Creates Large Documents
+        Latency
+        Slow Application
+        Unbounded Documents -> Might exceed 16mb limit of BSON
+...........................................................................
+Referencing:
+    Save the ID field as a link
+    Simple
+    Called as Linking or Normalizing
+    Adv:
+        No duplication
+        Smaller Documents
+    DisAdv:
+        Multiple Query
+............................................................................
+Scaling Data Model:
+    Optimum Efficiency:
+        Query Result time
+        Memory Usage
+        CPU Usage
+        Storage Usage
+
+    Avoid Unbounded Documents
+.............................................................................
+Schema Design Patterns:
+    Guidelines to plan, organize and model Data
+
+    Common Schema Anti-Patterns:
+        Massive Arrays,collections,documents
+        improper Indexes
+...............................................................................
+Data Explorer:
+    Free Tier
+    Indexes,Schema Anti Patterns -> Guidelines
+    We can drop index based on usage
+...............................................................................
+Performance Advisors:
+    M10 Tier and Higher
+    Gives suggestions on index, uncessary indexes and Schema improvements
+...............................................................................

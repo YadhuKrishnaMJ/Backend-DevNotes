@@ -1,0 +1,53 @@
+MongoSh -> Mongo shell to connect to mongo db cluster
+MongoDb Atlas:
+-> Developer data platform
+-> DBaas 
+-> Replica set -> data stored in more than one server, data redundacy
+-> Types:
+    cluster -> Shared M0 / Dedicated M10
+    Serverless
+
+-> Change as Scale, using Cloud providers
+-> Backups,Online Archive, CLI and Administration Applications
+-> Other Services:
+    Atlas Search 
+    Atlas Vector Search
+    Atlas Stream
+    Atlas Edge Server 
+    Atlas Data Lake
+    Atlas Charts
+...............................................................................
+
+Organizations:
+    group users and teams, grant access
+
+Projects:
+    Define and organize resources    
+    Create separate projects for dev,testing and production
+
+Database -> Collections -> Documents
+.................................................
+
+Creating a Cluster:
+    Choose Create cluster
+    Select Advanced Config
+    Select free tier(M0) and confirm
+    create admin user for access from anywhere
+    add ip address of working machine to access mongo db from our system (add my current IP)
+    load sample dataset
+    browse collections
+    go to a document
+    use search feature
+
+...............................................  
+
+Creating A Cluster using CLI:
+    atlas setup --clusterName myAtlasClusterEDU --provider AWS --currentIp --skipSampleData --username myAtlasDBUser --password myatlas-001 | tee atlas_cluster_details.txt
+
+    Sample data load:
+    atlas clusters sampleData load myAtlasClusterEDU
+
+................................................
+Free tier cloud providers -> AWS,GCP,Azure
+Grant Access -> Organizations tab
+................................................

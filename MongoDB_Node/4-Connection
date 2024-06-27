@@ -1,0 +1,61 @@
+Connection String:
+    Allows to Connect to MongoDB Cluster
+    Host and Options
+    Connection methods:
+        Shell
+        Compass
+        Applications
+    Formats:
+        Standard
+            Standalone clusters,replica sets,shared clusters
+        DNS Seed List
+            DNS server list
+            Flexibility
+            Change Servers
+......................................................................
+Connection String Location:
+    Database
+    Connect
+    Connect Applications
+    Follow Instructions and connection String
+    srv -> dns seedlist
+......................................................................
+ Connecting via MongoDb Shell:
+    Database
+    Connect
+    Connect via Shell
+    Instructions
+    Copy and paste connection string in Command
+......................................................................
+MongoDB is Node.js Repl Environment -> Use Javascript
+Use Javascript logics in MongoSH
+.......................................................................
+Command to get Connection String:
+    atlas clusters connectionStrings describe myAtlasClusterEDU
+
+Storing Connection String:
+    MY_ATLAS_CONNECTION_STRING=$(atlas clusters connectionStrings describe myAtlasClusterEDU | sed "1 d")
+    mongosh -u myAtlasDBUser -p myatlas-001 $MY_ATLAS_CONNECTION_STRING
+.......................................................................
+MongoDB Compass Connection:
+    GUI 
+    
+    Connection:
+        Connect
+        Connect Compass
+        Connection String
+
+        in MongoDB Compass:
+            New Connection
+            Edit Connection String
+            paste (fill Password)
+            Save And Connect
+........................................................................
+Mongo DB Application Connection using Drivers:
+    Drivers:
+        Connect via Connection strings for popular language
+........................................................................
+TroubleShoot
+    Network Access Error
+        
+    User Authentication Error
