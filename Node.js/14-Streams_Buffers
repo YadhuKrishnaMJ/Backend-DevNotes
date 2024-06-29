@@ -1,0 +1,25 @@
+Stream:
+    Sequence of data moved
+    one point to another
+        NodeJS process data in chunks 
+            Doesnt wait for all to process
+    
+...................................................
+
+Buffers:
+     NodeJS cannot control instream pace
+     Decides right time to send data
+     Used to process a stream of data 
+.................................................................
+
+const buffer = new Buffer.from("Yadhu");
+
+buffer.write("ProCoder"); //overwritten and letter skippes
+//Limited memory -> buffer
+
+
+console.log(buffer.toString());
+console.log(buffer);
+console.log(buffer.toJSON());
+
+..................................................................

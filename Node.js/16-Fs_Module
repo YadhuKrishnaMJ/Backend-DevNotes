@@ -1,0 +1,40 @@
+Fs Module:
+    Helps us work with file systems
+.......................................................
+
+const fs = require("node:fs");
+
+console.log("first");
+//Used to read file content with utf 8 , synchronous
+const fileContents = fs.readFileSync("./file.txt","utf-8")
+console.log(fileContents);
+
+console.log("second");
+//Asynchronous Method (file,encoding,callback) 
+//This uses error first callback pattern
+fs.readFile("./file.txt","utf-8",(error,data)=>{ //recieves error and data
+    if(error){
+        console.log(error);
+    } else{
+        console.log(data);
+    }
+});
+console.log("Third");
+
+//Writing to a file
+//Synchronous
+fs.writeFileSync("./greet.txt","Hello World!");
+
+//Asynchronous version
+//(file, data, error first callback)
+//use third object argument to append
+fs.writeFile("greet.txt","Crazy!", {flag:"a" }, (err) =>{
+    if(err){
+        console.log(err);
+    }
+    else{
+        console.log("File Written");
+    }
+});
+
+.......................................................................................... 

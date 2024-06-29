@@ -1,0 +1,17 @@
+Binary Data:
+    Computers -> 0 or 1
+
+    Character in binary format:
+        Character -> Number(Character code)-> Binary
+
+    Character Sets:
+        predefined sets of charactter rep by numbers
+        UNICODE AND ASCI
+
+    Character Encoding:
+        dictates how to represent a number in character sets
+        as binary data and stor in Computers
+
+        How many bits to use to represent a number(UTF - 8)
+            Every character is stored as a byte
+            

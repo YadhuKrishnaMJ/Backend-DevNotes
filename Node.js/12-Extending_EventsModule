@@ -1,0 +1,63 @@
+pizza-shop Module:
+
+
+const EventEmitter = require("node:events");
+
+
+
+// Extends EventEmitter so PizzaShop can have functionalities of event emitter
+class PizzaShop extends EventEmitter{
+    constructor(){
+        super();
+        this.orderno = 0;
+    }
+
+    order(size,topping){
+        this.orderno++;
+        this.emit("order",size,topping);
+    }
+
+    displayOrder(){
+        console.log(`The order no is: ${this.orderno}`)
+    }
+}
+
+module.exports = PizzaShop;
+.............................
+
+drink-machine module:
+
+
+class DrinkMachine{
+    serveDrink(size){
+        if(size==="large"){
+            console.log("Serving Complimentary drink");
+        }
+    }
+}
+
+module.exports = DrinkMachine;
+
+...............................
+
+index.js module
+
+
+const PizzaShop = require("./pizza-shop");
+const DrinkMachine =  require("./drink-machine");
+
+const drinkmachine = new DrinkMachine();
+
+const pizzashop = new PizzaShop();
+
+pizzashop.on("order", (size,topping)=>{
+    console.log(`Order Recieved baking a ${size} pizza with ${topping}`);
+    drinkmachine.serveDrink(size);
+});
+
+
+pizzashop.order("large","chicken");
+
+pizzashop.displayOrder();
+....................................................................
+

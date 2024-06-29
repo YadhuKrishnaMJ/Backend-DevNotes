@@ -25,5 +25,6 @@ Types of CallBacks:
         Callbacks executed immediately 
     Asynchronous:
         Resume code after an Asynchronous operation
-        
+        Delay execution of a function until a particular time or event has occured
+
 
