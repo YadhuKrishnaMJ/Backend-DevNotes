@@ -21,4 +21,24 @@ Module Wrapper:
             __dirname:
                 Directory name of the current module
 .......................................................................................
-            
+
+Module Caching:
+        Instead of importing modules fresh everytime
+            Node.js caches modules based on prev imports
+            improves performance
+
+        Eg:
+        const superHero = require("./super-hero")
+        console.log(superHero.getName());
+        superHero.setName("Superman");
+        console.log(superHero.getName());
+
+        //Retrieves the remembered values (cached)
+        const newSuperHero = require("./super-hero")
+        console.log(newSuperHero.getName()); //Retrives same value as above
+
+note:
+    To use different instances, export the class itself
+
+...................................................................................
+

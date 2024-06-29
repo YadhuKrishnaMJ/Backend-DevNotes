@@ -1,0 +1,29 @@
+A function can be passed as an argument to a function
+A function can be returned as values from another function
+
+function greet(name){
+    console.log(`Hello! ${name}`);
+}
+
+function greetYadhu(greetfn){
+    const name = "Yadhu";
+    greetfn(name);
+}
+
+greetYadhu(greet);
+
+
+here greet is a callback function
+and greetyadhu is the higher order function
+....................................................................
+
+Callback:
+    A function passed as an argument to another function
+
+Types of CallBacks:
+    Synchronous:
+        Callbacks executed immediately 
+    Asynchronous:
+        Resume code after an Asynchronous operation
+        
+

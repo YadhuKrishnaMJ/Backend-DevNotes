@@ -1,0 +1,107 @@
+When Nodejs was created it didnt have a built in module system
+CommonJS was used
+
+ES2015 introduced standardized Module system
+ESmodules/ESM
+
+Rules:
+    Default exports -> Any name assigned
+    Named Exports -> import name must be same
+............................................................................
+
+Extension for ESMODULES -> .mjs
+
+............................................................
+
+Pattern 1:
+
+//File 1
+
+const add = (a , b) => {
+    return a + b;
+};
+
+export default add;
+
+//File 2
+import add from "./math-esm.mjs"
+............................................
+
+Pattern 2:
+
+export default (a , b) => {
+    return a + b;
+};
+
+................................................
+
+pattern 3:
+
+//File 1
+
+const add = (a , b) => {
+    return a + b;
+};
+
+const subtract = (a,b) => {
+    return a - b;
+};
+
+export default{
+    add,
+    subtract
+}
+
+//file 2
+
+import math from "./math-esm.mjs";
+
+console.log(math.add(5,5));
+console.log(math.subtract(5,5));
+
+.....................................................................
+
+
+Pattern 3 Restructuring:
+
+import math from "./math-esm.mjs";
+
+const {add, subtract} = math
+console.log(add(5,5));
+console.log(subtract(5,5));
+
+......................................................................
+NAMED Exports
+
+Pattern 4 :
+
+
+//File 1
+
+export const add = (a , b) => {
+    return a + b;
+};
+
+export const subtract = (a,b) => {
+    return a - b;
+};
+
+
+
+//File 2
+
+import * as  math from "./math-esm.mjs";
+
+const {add, subtract} = math
+console.log(add(5,5));
+console.log(subtract(5,5));
+
+..............................................................................
+
+Restructuring while import
+
+import {add, subtract} from "./math-esm.mjs";
+
+console.log(add(5,5));
+console.log(subtract(5,5));
+................................................................................

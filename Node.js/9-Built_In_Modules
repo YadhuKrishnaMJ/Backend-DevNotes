@@ -1,0 +1,48 @@
+Node.js is shipped with these Modules
+Core Modules
+Important:
+    path
+    events
+    fs
+    stream
+    http
+........................................
+
+Path Module:
+    Work with files and path
+
+Examples:
+
+const path = require("node:path");  //We can omit node: but recommend keep it
+
+console.log(__filename);
+console.log(__dirname);
+
+//Returns basename
+console.log(path.basename(__filename));
+console.log(path.basename(__dirname));
+
+//Returns extension
+console.log(path.extname(__filename));
+console.log(path.extname(__dirname));
+
+//important info aout the file to an object
+console.log(path.parse(__filename)); 
+
+//Returns path string for an object
+console.log(path.format(path.parse(__filename))); 
+
+//Checks if the path is absolute
+console.log(path.isAbsolute(__filename)); 
+console.log(path.isAbsolute("./data.json")); 
+
+//join method
+console.log(path.join("/folder1","//folder2","../index.html"));
+console.log(path.join(__dirname,"data.json"));
+
+//Resolve method
+const path = require("node:path");
+// Adds absolute path unless specified by user not to by using //
+console.log(path.resolve("folder1","index.html"))
+
+..................................................................

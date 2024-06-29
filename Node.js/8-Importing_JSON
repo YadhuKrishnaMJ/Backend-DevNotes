@@ -1,0 +1,23 @@
+Importing JSON:
+    JavaScript Object Notation
+    Data interchange format 
+
+eg:
+
+{
+    "name":"Bruce Wayne",
+    "addresss": {
+        "street": "Wayne Manor",
+        "city" : "Gotham" 
+    }
+}
+
+Access it by:
+
+const data = require("./data.json") //or remove .json
+console.log(data);
+
+....................................................................
+Watch Mode in JS:
+    in Terminal:
+        node --watch index
