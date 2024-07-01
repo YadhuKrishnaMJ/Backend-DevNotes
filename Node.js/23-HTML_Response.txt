@@ -1,0 +1,75 @@
+We can Send HTML by specifying content type as:
+    text/html 
+
+......................................................
+
+const http = require("node:http");
+
+//Always speccify content type
+const server = http.createServer((req,res) => {
+
+    const superHero = {
+        firstName:"Bruce",
+        secondName:"Wayne",
+    }
+
+
+
+    res.writeHead(200,{"Content-Type":"application/json"}); //Successfull response
+    res.end(JSON.stringify(superHero)); //Text Response
+});
+
+server.listen(3000,() =>{
+    console.log(`Server running on port 3000`);
+}); //Port no
+
+ 
+.............................................................................
+
+Its good practise to store HTML files Separately:
+ Tip: create new html file, and type ! + TAB for auto html content
+
+
+ code:
+
+ const http = require("node:http");
+//fs module for reading the index.html file
+const fs = require("node:fs");
+
+
+//Always speccify content type
+const server = http.createServer((req,res) => {
+    res.writeHead(200,{"Content-Type":"text/html"}); 
+
+    //Use synch cuz read before sending
+    const html = fs.readFileSync("./index.html","utf-8");
+
+    res.end(html); //HTML Response
+});
+
+server.listen(3000,() =>{
+    console.log(`Server running on port 3000`);
+}); //Port no
+
+ 
+.....................................................................................
+ReadFileSync causes unnecessary buffer storage, so rather use streams
+.......................................................................................
+
+const http = require("node:http");
+//fs module for reading the index.html file
+const fs = require("node:fs");
+
+
+//Always speccify content type
+const server = http.createServer((req,res) => {
+    res.writeHead(200,{"Content-Type":"text/html"}); 
+    fs.createReadStream(__dirname+"./index.html").pipe(res); //pipe > performance
+});
+
+server.listen(3000,() =>{
+    console.log(`Server running on port 3000`);
+}); //Port no
+
+ ..........................................................................................
+ 

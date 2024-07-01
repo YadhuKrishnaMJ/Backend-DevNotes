@@ -1,0 +1,6 @@
+Node.js Runtime:
+    Dependencies -> v8,libuv,zlib,crypto,etc
+    c/c++ features
+    JS Library
+............................
+

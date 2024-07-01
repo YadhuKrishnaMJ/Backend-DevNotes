@@ -1,0 +1,9 @@
+libuv:
+    cross platform open source library in c
+    handles asynch operations
+    how?
+        Thread pool
+        Event Loop
+....................................................
+
+Thread pool:

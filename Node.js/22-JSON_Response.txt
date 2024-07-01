@@ -1,0 +1,27 @@
+We cannot send JavaScript objects
+Instead we Send it as JSON
+
+..............................................................
+ const http = require("node:http");
+
+//Always speccify content type
+const server = http.createServer((req,res) => {
+
+    const superHero = {
+        firstName:"Bruce",
+        secondName:"Wayne",
+    }
+
+
+
+    res.writeHead(200,{"Content-Type":"application/json"}); //Successfull response
+    res.end(JSON.stringify(superHero)); //Text Response
+});
+
+server.listen(3000,() =>{
+    console.log(`Server running on port 3000`);
+}); //Port no
+
+ ................................................................
+
+ We can later parse the JSON to Java object using JSON.parse()

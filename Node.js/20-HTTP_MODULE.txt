@@ -1,0 +1,12 @@
+ Client - Server Model:
+    Client sends Request
+    Server sends Response
+
+HTTP:
+ Hyper Text Transfer Protocol
+    Format for client and server to comm.
+    Client -> HTTP Request
+    Server -> HTTP Response
+    Node:
+        Create a web server using node.js
+        Async Node concepts are used
