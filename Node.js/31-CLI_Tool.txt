@@ -1,0 +1,12 @@
+CLI:
+    Command Line Interface
+.............................................
+To convert a pakage into CLI:
+    add this to top of index:
+        #!/usr/bin/env node
+    add bin in pakage.json:
+          "bin":{
+                "yadhu-pokedex":"index.js"
+            },
+..............................................
+

@@ -7,3 +7,45 @@ libuv:
 ....................................................
 
 Thread pool:
+    Libuv consists a Multi thread pool
+    Takes threads from Main Thread for Async operations
+
+..........................................................
+
+Cryto Module:
+    Cryptographic functionalities, uses libuv
+
+Tip: Checking the code time 
+
+const crypto = require("node:crypto");
+
+const start = Date.now();
+crypto.pbkdf2Sync("password","salt",100000,512,"sha512");
+crypto.pbkdf2Sync("password","salt",100000,512,"sha512");
+crypto.pbkdf2Sync("password","salt",100000,512,"sha512");
+console.log("Hash: ",Date.now() - start);
+
+..........................................................................
+
+Async Methods like fs.readFile() and crypto.pbkdf2 
+    -> run in libuv threadpool
+...........................................................................
+
+Thread Pool Size:
+    libuv has 4 threads
+    beyond 4 threads happen in next sequence
+Increasing thread pool size:
+    process.env.UV_THREADPOOL_SIZE = 5; // Increases the threadpool size
+
+if thread pool > cpu cores:
+    increases avg processing time
+..............................................................................
+
+ http.request method doesnt use the threadpool
+ same doesnt get affected by cpu cores
+
+ ..............................................................................
+
+ node handles native async whenever possible(network io)
+ uses threadpool otherwise
+ ................................................................

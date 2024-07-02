@@ -1,0 +1,69 @@
+Code Execution in Node.js:
+    V8 engine:
+        Memory Heap:
+            variables and functions
+        Call Stack:
+            push and pop of functions
+    Libuv:
+        handles async methods
+.....................................................
+Event Loop:
+    C program, part of Libuv
+    Coordinates -> sync, async codes in Node
+
+    Components:
+        Timer Queue:
+            callbacks -> setTimeout/setInterval
+        IO Queue:
+            callbacks -> I/O, Async methods (fs,http)
+        Check Queue:
+            callbacks -> setImmediate
+        Close Queue:
+            callbacks -> close events 
+
+        MicroTask Queue: (Not part of libuv)
+            NextTick Queue:
+                callbacks -> process.nextTick
+            Promise Queue:  
+                callbacks -> promise 
+.......................................................
+Priority : Sync > Async
+.......................................................
+Event Loop execution order:
+    1. microtask (nexttick -> promise)
+    2. timer 
+    3. microtask if present
+    4. io Queue
+    5. microtask if present
+    6. check Queue
+    7. microtask if present
+    8. close queue
+    9. microtask queue
+............................................................
+MicroTask Queue:
+    
+    To Queue a callback Function to nextTick:
+        process.nextTick(()=>{});
+
+    To Queue a callback Function to Promise:
+        Promise.resolve().then(()=>{});
+
+
+Note: All user written Sync Js code runs before Async Code
+...........................................................
+Timer Queue:
+
+    setTimeout:
+        setTimeout(()={
+            console.log("Timeout1");
+
+        },0);
+
+    -> MicroTask Queue > Timer Queue
+
+    -> Callbacks in microtask executed between timer queue callbacks
+
+    -> Timer Queue execute in FIFO order
+
+......................................................................
+

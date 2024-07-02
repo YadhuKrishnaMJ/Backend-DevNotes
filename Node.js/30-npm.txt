@@ -1,0 +1,87 @@
+NPM:
+    World's Largest Software Library
+    Software Pakage Manager
+    Default package manager for Node.js
+    Node Package Manager -> JavaScript Package Manager
+...............................................................
+Package.json:
+
+    npm's config file
+    used by npm cli
+
+{
+    "name": "greet - yadhu",
+    "version": "1.0.0",
+    "description": "Greeting yadhu",
+    "keywords": [
+        "greet",
+        "yadhu"
+    ],
+    "main": "index.js" // Entry point for the project
+
+}
+
+or use:
+    npm init (CLI)
+    npm init --yes (All default values)
+..................................................
+Installing Packages:
+    npm install <packages name>
+
+Package-lock.json is created to keep track of dependencies
+Package.json dependencies gets updated
+...................................................
+Uninstalling Package:
+    npm uninstall <packages name>
+...................................................
+Dependencies:
+    npm install -> installs all dependencies
+....................................................
+Versioning:
+    npm install <packages>@version
+
+    Semantic Version(SemVer):
+            X.Y.Z
+                X-> Major version
+                Y-> Minor version
+                Z -> Patch
+
+    Versioning Rules:   
+        Bugs + Backward compatible -> Z++
+        New Functionality + Backward compatible -> Y++, Z = 0
+        Major Change, non Backward compatible -> X++, Y,Z = 0
+
+    Note:
+        Initial Development:
+            0.Y.Z / 0.1.0
+        Production Ready:
+            1.0.0
+        
+
+.....................................................
+Global Packages:
+    Nodemon:
+        Similar to --watch
+        CLI packages
+        npm install -g nodemon // g for global
+    Global packages dont appear in dependencies
+    Manual install required
+
+    Uninstalling:
+        npm uninstall -g nodemon
+......................................................
+Npm Scripts:
+    bundle common commands for a project
+    entered in CLI
+    stored in Pakage.json
+    Syntax:
+        npm run <Script_name>
+
+    npm start is special case where u need not specify run
+...............................................................
+Publishing a NPM Package:
+    npm adduser <username>
+    npm publish 
+
+............................................................
+

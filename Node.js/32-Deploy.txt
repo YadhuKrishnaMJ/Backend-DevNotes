@@ -1,0 +1,4 @@
+Deploy options:
+    render.com
+    fly.io
+    
