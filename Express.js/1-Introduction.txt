@@ -1,0 +1,32 @@
+Installing Express:
+    npm i Express
+
+Installing Nodemon:
+    npm i --save-dev nodemon
+
+    Setup:
+        devStart in script in pakage.json
+        "devStart": "nodemon server.js"
+
+Create server.js:
+
+//import the express module
+const express = require("express");
+
+//Create Express App
+const app = express();
+
+//setting up routes (get,post,put,delete)
+app.get('/',(req,res) =>{
+    console.log('here');
+    res.render('index')
+
+})
+
+//Listen at port 
+app.listen(3000)
+..........................................................
+
+Create view folder and Install ejs view engine:
+    npm i ejs
+    
